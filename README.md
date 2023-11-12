@@ -1,6 +1,6 @@
 # deep-learning-challenge
 
-## Instructions
+# Instructions
 ## Step 1: Preprocess the Data
 Using your knowledge of Pandas and scikit-learn’s `StandardScaler()`, you’ll need to preprocess the dataset. This step prepares you for Step 2, where you'll compile, train, and evaluate the neural network model.
 
@@ -53,6 +53,8 @@ Use any or all of the following methods to optimize your model:
 5. Save and export your results to an HDF5 file. Name the file `AlphabetSoupCharity_Optimization.h5`.
 
 >[!IMPORTANT]
+>**REMOVE ONCE DONE**
+
 ## Step 4: Write a Report on the Neural Network Model
 For this part of the assignment, you’ll write a report on the performance of the deep learning model you created for Alphabet Soup.
 The report should contain the following:
