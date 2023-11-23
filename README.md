@@ -1,7 +1,31 @@
 # deep-learning-challenge
 
-# Instructions
-## Step 1: Preprocess the Data
+## Report Analysis
+
+### Overview
+The purpose of this analysis was to create a binary classification model to predict whether applicants to Alphabet Soup funding will be successful if funded.
+
+### Results
+- Data Preprocessing
+  - The target variable for the model is `IS_SUCCESSFUL`.
+  - The feature variables are `APPLICATION_TYPE`, `CLASSIFICATION`, `USE_CASE`, and all the other columns.
+  - The variables that did not fall under the 2 previous types were the `EIN` and `NAME` columns.
+ 
+- Compiling, Training, and Evaluating the Model
+  - The model contains 3 layers - An input layer with 43 nodes (number of features), first hidden layer with 80 nodes, second hidden layer with 30 nodes, and an output layer with sigmoid activation since this is a binary classification task.
+  - The initial model was able to achieve an accuracy of ~72.5% on the test data which did not meet the target of 75%.
+  - Attempts to increase model performance:
+    - Added more hidden layers and nodes
+    - Experimented with different activation functions - tanh instead of relu
+    - Increased number of epochs from 50 to 100
+
+### Summary
+The optimized model can now predict funding application success with 74% accuracy. To improve further, we could feed more training data and experiment with very powerful deep learning techniques. This would help Alphabet Soup make even better funding decisions.
+
+
+
+## Instructions
+### Step 1: Preprocess the Data
 Using your knowledge of Pandas and scikit-learn’s `StandardScaler()`, you’ll need to preprocess the dataset. This step prepares you for Step 2, where you'll compile, train, and evaluate the neural network model.
 
 Start by uploading the starter file to Google Colab, then using the information we provided in the Challenge files, follow the instructions to complete the preprocessing steps.
@@ -17,7 +41,7 @@ Start by uploading the starter file to Google Colab, then using the information 
 7. Split the preprocessed data into a features array, `X`, and a target array, `y`. Use these arrays and the `train_test_split` function to split the data into training and testing datasets.
 8. Scale the training and testing features datasets by creating a `StandardScaler` instance, fitting it to the training data, then using the `transform` function.
 
-## Step 2: Compile, Train, and Evaluate the Model
+### Step 2: Compile, Train, and Evaluate the Model
 Using your knowledge of TensorFlow, you’ll design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup-funded organization will be successful based on the features in the dataset. You’ll need to think about how many inputs there are before determining the number of neurons and layers in your model. Once you’ve completed that step, you’ll compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
 
 1. Continue using the file in Google Colab in which you performed the preprocessing steps from Step 1.
@@ -31,7 +55,7 @@ Using your knowledge of TensorFlow, you’ll design a neural network, or deep le
 9. Evaluate the model using the test data to determine the loss and accuracy.
 10. Save and export your results to an HDF5 file. Name the file `AlphabetSoupCharity.h5`.
 
-## Step 3: Optimize the Model
+### Step 3: Optimize the Model
 Using your knowledge of TensorFlow, optimize your model to achieve a target predictive accuracy higher than 75%.
 
 Use any or all of the following methods to optimize your model:
@@ -53,7 +77,7 @@ Use any or all of the following methods to optimize your model:
 5. Save and export your results to an HDF5 file. Name the file `AlphabetSoupCharity_Optimization.h5`.
 
 
-## Step 4: Write a Report on the Neural Network Model
+### Step 4: Write a Report on the Neural Network Model
 
 >[!IMPORTANT]
 >**Review then remove once done if needed.**
@@ -75,7 +99,7 @@ The report should contain the following:
 3. **Summary**: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
 
    
-## Step 5: Copy Files Into Your Repository
+### Step 5: Copy Files Into Your Repository
 Now that you're finished with your analysis in Google Colab, you need to get your files into your repository for final submission.
 
 1. Download your Colab notebooks to your computer.
